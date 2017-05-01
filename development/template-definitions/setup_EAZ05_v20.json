@@ -1,0 +1,78 @@
+{
+  "ID":"EAZ05_v20",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/Anatomy_v20_85plus.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "hullFormat": "nifti",
+  "hullSource": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/AnatMask.nii.gz",
+  "metadataFormat": "json",
+  "metadataSource": "../EAZ05_v20/template",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "colin27-T1",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/colin27T1_seg.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample": [1]
+    },
+    "descr":"Colin27, average of 27 T1 scans of same individual"
+  },{
+    "name": "macro-v20",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/MacroLabels.nii.gz",
+    "descr": "area labels, version 1.8"
+  },{
+    "name": "WM",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/wwhite.img",
+    "pctile": "0.1-99.9",
+    "descr": "white matter"
+  },{
+    "name": "GM",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/wgrey.img",
+    "pctile": "0.1-99.9",
+    "descr": "gray matter"
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/Anatomy_v20.nii.gz",
+    "colormap": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/index2rgb.json",
+    "descr":"labels with colin27-T1 background"
+  }],
+  "sliceRange": [184,3,-1],
+  "svgTracingMethod": "mindthegap",
+  "aboutHtml":[],
+  "citeHtml":[],
+  "sourceHtml":[],
+  "config": {
+    "release":"beta",
+    "species": "Human",
+    "nlxName":"	Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "JuBrain cytoarchitectonic atlas by Amunts, Zilles et al., with maximum probability maps of Eickhoff et al. (2005)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": ["[unsegmented]"],
+    "plugins":[],
+    "aboutHtml":[
+      "EMPTY"
+    ],    
+    "licenceHtml":[
+      "The copyright and all other rights related to the data underlying the EAZ05 template are held by Forschungszentrum Juelich GmbH."
+    ]
+  }
+}

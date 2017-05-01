@@ -1,0 +1,117 @@
+{
+  "ID":"PLCJB14",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/WHS_Rat/WHS_SD_rat_atlas_v1.01_121.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "ITK-SnAP",
+  "metadataSource": "/my/rawdata/WHS_Rat/WHS_SD_rat_atlas_v1_hier.label",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "T2*",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/WHS_SD_rat/WHS_SD_rat_T2star_v1.01.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Anatomical MRI, T2*-weighted gradient echo image at 39 μm original resolution (512x1024x512 voxels)",
+    "shareAsNifti": {
+      "downsample": [2,3]
+    }    
+  },{
+    "name": "DTI-b0",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/WHS_SD_rat/WHS_SD_rat_b0_512_v1.01.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "The DTI b0 image resampled to 39 μm resolution (1024x512x512 voxels). A T2-weighted image acquired without any diffusion sensitizing gradients"
+  },{
+    "name": "cFA",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/WHS_SD_rat/WHS_SD_rat_FA_color_512_v1.01.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Color FA map at original 78 μm resolution (512x512x256 voxels). Combines the FA and primary eigen vector to 24-bit color RGB where intensity is given by relative FA value and color is assigned to directions (RGB to xyz respectively)"
+  },{
+    "name": "ADC",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/WHS_SD_rat/WHS_SD_rat_ADC_512_v1.01.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Apparent Diffusion Coefficient (ADC) map resampled to 39 μm resolution (1024x512x512 voxels). Also known as the \"mean diffusivity\" or \"trace ADC\" or \"mean ADC\""
+  },{
+    "name": "DWI",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/WHS_SD_rat/WHS_SD_rat_DWI_512_v1.01.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Diffusion weighted image map resampled to 39 μm resolution (1024x512x512 voxels). Mean diffusion weighted image, also referred to as the \"isotropic diffusion image\""
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/rawdata/WHS_Rat/WHS_SD_rat_atlas_v1.01.nii.gz",
+    "descr": "Volumetric atlas of 76 anatomical structures. The Scalable Brain Atlas template is derived from this volume.",
+    "colormap": "../PLCJB14/template/index2rgb.json",
+    "shareAsNifti": {
+      "downsample": [2,3]
+    }    
+  }],
+  "superzoom":[{
+    "name": "T2*+",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/WHS_SD_rat/WHS_SD_rat_T2star_v1.01.nii.gz"
+  }],  
+  "sliceRange": [1018,1,-8],
+  "svgTracingMethod": "mindthegap",
+  "aboutHtml":[],
+  "citeHtml":[],
+  "sourceHtml":[],
+  "config": {
+    "release":"beta",
+    "species": "Rat",
+    "strain":"Sprague Dawley",
+    "nlxName":"Sprague Dawley",
+    "nlxId":"birnlex_266",
+    "ncbiName":"Rattus norvegicus",
+    "ncbiId":"10116",
+    "templateName": "Waxholm Rat (Papp, Leergaard, Calabrese, Johnson, Bjaalie 2014)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": ["White matter"],
+    "aboutHtml": [
+      "The Waxholm Rat atlas is an open access volumetric atlas of the Sprague Dawley rat brain. The is based on high resolution isotropic ex vivo T2* weighted MRI and DTI data, acquired at the Duke Center for In Vivo Microscopy at resolutions of 39 μm and 78 μm, respectively. The specimen is an 80 day old male Sprague Dawley rat.",
+      "Anatomical delineations in the atlas are based on image contrast, described in detail in the accompanying publications (Papp et al. 2014, Kjonigsen et al. 2015). The latest version of the atlas contains 79 structures, and is intended as a basis for further partitioning by researchers in the community. We have anchored the atlas to both Waxholm Space and the stereotaxic space (see Documentation).",
+      "We encourage researchers to use, distribute, and further develop this atlas, which is licensed under the <a href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\">Creative Commons Attribute Non-Commercial Share-Alike</a> license."
+    ],
+    "sourceUrl": "http://software.incf.org/software/waxholm-space-atlas-of-the-sprague-dawley-rat-brain",
+    "plugins":["landmarks","microdraw"],
+    "definingCitations":[{ 
+      "authors":["Papp EA","Leergaard TB","Calabrese E","Johnson GA","Bjaalie JG"], 
+      "title":"Waxholm Space atlas of the Sprague Dawley rat brain",
+      "journal":"NeuroImage",
+      "volume":"97",
+      "pages":"374-386",
+      "year":"2014", 
+      "doi":"10.1016/j.neuroimage.2014.04.001"
+    },{
+      "authors":["Kjonigsen LJ","Lillehaug S","Bjaalie JG","Witter MP","Leergaard TB"],
+      "title":"Waxholm Space atlas of the rat brain hippocampal region: Three-dimensional delineations based on magnetic resonance and diffusion tensor imaging.",
+      "year":"2015",
+      "journal":"NeuroImage",
+      "volume":"108",
+      "pages":"441–449",
+      "doi":"10.1016/j.neuroimage.2014.12.080"
+    },{
+      "authors":["Sergejeva M","Papp EA","Bakker R","Gaudnek MA","Okamura-Oho Y","Boline J","Bjaalie JG","Hess A"],
+      "title":"Anatomical landmarks for registration of experimental image data to volumetric rodent brain atlasing templates.",
+      "journal":"Journal of Neuroscience Methods",
+      "volume":"240",
+      "pages":"161-169",
+      "year":"2015",
+      "doi":"10.1016/j.jneumeth.2014.11.005"
+    }]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "ID":"FVE91_with_CBCetal15",
+  "ID":"FVE91_with_CBCetal15",
+  "defineTransformations":{
+    "CBCetal15_to_FVE91":{
+      "fixed":"/home/rbakker/rawdata/FVE91_on_F99/Macaque_F99_LR_MRI_resampledF99.nii.gz",
+      "moving":"/my/htdocs/scalablebrainatlas/templates_dev/CBCetal15/source/civm_rhesus_v1_gre_downsample2.nii.gz",
+      "program": "elastix",
+      "paramfiles": [
+        "http://localhost/incf/scalablebrainatlas/elastix/Par0000affine.txt"
+      ]
+    }
+  },
+  "delineationFormat": "nifti",
+  "delineationSource": "/home/rbakker/rawdata/FVE91_on_F99/Macaque_F99_L_FV91_2x05_F99_smooth121.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "origin": "hull"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/home/rbakker/rawdata/FVE91_on_F99",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "cort. thickness",
+    "format": "nifti",
+    "source": "",
+    "applyTransformation":"FVE91_with_CBCetal15",
+    "pctile": "0.1-99.9",
+    "descr":"CBCetal15 et al. cortical thickness, warped."
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"alpha",
+    "species": "Macaque",
+    "templateName": "Felleman and Van Essen 1991",
+    "space":"F99",
+    "hemisphere":"L",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm from posterior",
+    "slicePositionDescription":"anterior(+) distance",
+    "whiteMatterAcronyms": [],
+    "plugins":["bar3d"],
+    "aboutHtml":[
+      "The FVE91 parcellation is described in: Daniel J. Felleman and David C. Van Essen (1991) \"Distributed hierarchical processing in the primate cerebral cortex\" Cereb Cortex. 1(1):1-47.",
+      "F99 space is introduced in: David C. Van Essen (2002) \"Windows on the brain. The emerging role of atlases and databases in neuroscience.\" Curr. Op. Neurobiol. 12: 574-579, doi: 10.1016/S0959-4388(02)00361-6.",
+      "F99 space is defined by a 0.5 mm MRI scan of an approx. 5 year old male macaque monkey case F99UA1, provided by M. Logothetis."
+    ],
+    "definingCitations":[{
+      "authors":["Felleman DJ","Van Essen DC"],
+      "year":"1991",
+      "title":"Distributed hierarchical processing in the primate cerebral cortex.",
+      "journal":"Cereb Cortex",
+      "volume":"1(1)",
+      "pages":"1-47",
+      "doi":"10.1093/cercor/1.1.1"
+    }]
+  }
+}

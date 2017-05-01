@@ -1,0 +1,96 @@
+{
+  "ID":"BIGB13zoom",
+  "defineTransformations":{
+    "EAZ05_to_BIGB13":{
+      "fixed":"http://localhost/incf/scalablebrainatlas/BIGB13/source/full8_400um.nii.gz",
+      "moving":"http://localhost/incf/scalablebrainatlas/EAZ05_v20/source/colin27T1_seg.nii.gz",
+      "program": "elastix",
+      "paramfiles": [
+        "http://localhost/incf/scalablebrainatlas/elastix/Par0000affine.txt",
+        "http://localhost/incf/scalablebrainatlas/elastix/Par0000bspline_stefan.txt"
+      ]
+    }
+  },
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/Anatomy_v20_85plus.nii.gz",
+  "delineationParams": {
+    "applyTransformation":"EAZ05_to_BIGB13",
+    "background":"0",
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "../EAZ05_v20/template",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "Nissl",
+    "format": "nifti",
+    "source": "/my/rawdata/bigbrain/full8_400um.nii.gz",
+    "descr": "BigBrain Nissl volume, converted to 8-bit grayscale, downsampled to 400μm.",
+    "pctile": "0-100",
+    "whitebackground":true,
+    "shareAsNifti": {
+      "downsample": [1,2]
+    }
+  },{
+    "name": "colin27-T1",
+    "format": "nifti",
+    "applyTransformation":"EAZ05_to_BIGB13",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/colin27T1_seg.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample": [1]
+    },
+    "descr":"Colin27, average of 27 T1 scans of same individual"
+  },{
+    "name": "JuBrain",
+    "format": "nifti",
+    "applyTransformation":"EAZ05_to_BIGB13",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/Anatomy_v20.nii.gz",
+    "colormap": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/index2rgb.json",
+    "descr":"Nonlinearly registered JuBrain labels with colin27-T1 background"
+  }],
+  "superzoom":[{
+    "name": "Nissl",
+    "format": "png",
+    "source": "/mnt/public/BigBrain/coronal_nissl_20um/pm%04do.png"
+  }],
+  "sliceRange": [377,8,-3],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species":"Human",
+    "age": "65",
+    "sex": "female",
+    "nlxName":"Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Bigbrain at 400 \u03bcm, with coronal zoom at 20 \u03bcm.",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": ["[unsegmented]"],
+    "plugins":[],
+    "aboutHtml":[
+      "BigBrain is a high-resolution 3D digital atlas of the human brain, resulting from a joint effort of the Montreal Neurological Institute and the Forschungszentrum Jülich. It was released in June 2013 as part of the European Human Brain Project.",
+      "It consists of 7,404 coronal sections, each 20 µm thick, stained using the Nissl method that causes a dark stain in neuronal cell bodies. The slices have been digitized at 20 µm resolution and reconstructed back into a volume, thereby correcting for tears, shifts and deformations.",
+      "This Scalable Brain Atlas template shows a 400 µm downsampled version of the Bigbrain data. The full resolution atlas is available at <a href=\"https://bigbrain.loris.ca/main.php\">bigbrain.loris.ca</a>."
+    ],
+    "definingCitations":[{
+      "authors":["Amunts K","Lepage C","Borgeat L","Mohlberg H","Dickscheid T","Rousseau MÉ","Bludau S","Bazin PL","Lewis LB","Oros-Peusquens AM","Shah NJ","Lippert T","Zilles K","Evans AC"],
+      "title":"BigBrain: an ultrahigh-resolution 3D human brain model.",
+      "journal":"Science",
+      "year":"2013",
+      "volume":"340(6139)",
+      "pages":"1472-5",
+      "doi":"10.1126/science.1235381"
+    }]
+  }
+}

@@ -1,0 +1,55 @@
+To create an atlas, I (or in the future, you) need to run a
+script that takes a configuration file as input.
+
+What follows is a list of items that go into this file.
+
+* ID: 
+id of the template, typically taken from the 'defining publication',
+first author lastnames and year. In your case: "HNI15",
+
+* delineationSource: "AtlasLabelNiftiFile.nii.gz",
+file that contains the atlas labels, currently the nifti format is
+supported. Direct import from svg is possible but requires some extra
+work.
+
+* metadataSource: "metadatafile"
+supported format are ITK-SnAP. Other text-based formats require some
+extra work.
+The ITK-SnAP format is csv with columns:
+- IDX:   Zero-based index
+- -R-:   Red color component (0..255)
+- -G-:   Green color component (0..255)
+- -B-:   Blue color component (0..255)
+- -A-:   Label transparency (0.00 .. 1.00) <= IGNORED
+- VIS:   Label visibility (0 or 1) <= IGNORED
+- IDX:   Label mesh visibility (0 or 1)  <= IGNORED
+- LABEL: Label description 
+  In LABEL you can also specify abbreviation and hierarchy,
+  by using the | separator: label|abbr|parent
+
+* overlays
+This is a list of nifti files that contain the available imaging
+modalities. For each file, specify
+- name: name of the modality, such as "T2", or "nissl"
+- source: name of nifti file
+- pctile: percentile to use for scaling this data. For example,
+    "0.1-99.9" will scale the data between the 0.1% percentile and 99,9% percentile.
+    "0-100" scales the data between its min and max value
+- descr: description of the data modality, 
+    such as "T2*-weighted gradient echo image at 39 μm resolution"
+
+There is also experimental support for high resolution slice stacks.
+So for your case, it would be interesting to build both a coronal
+and a saggital atlas, with the nissl images in full resolution.
+    
+* species: animal species
+* strain: animal strain (optional)
+* nlxName: neurolex name (optional)
+* nlxId": neurolex ID (optional
+* ncbiName: name in NCBI taxonomy (optional)
+* ncbiId: id in NCBI taxonomy (optional)
+* hemisphere: hemispheres covered by the parcellation:
+  L = left, R = right, LR = both
+* definingCitations: list of defining citations,
+  each one having
+    authors, title, journal, volume, pages, year, doi

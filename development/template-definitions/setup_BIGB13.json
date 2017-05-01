@@ -1,0 +1,76 @@
+{
+  "ID":"BIGB13",
+  "prepareTransformations":{
+    "EAZ05_to_BIGB13":{
+      "fixed":"http://localhost/incf/scalablebrainatlas/BIGB13/source/full8_400um_downsample2.nii.gz",
+      "moving":"http://localhost/incf/scalablebrainatlas/EAZ05_v20/source/colin27T1_seg.nii.gz",
+      "mode":"linear"
+    }
+  },
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/bigbrain/full_cls_400um_121_bg0.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "background": "0"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "../BIGB13",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "Merker",
+    "format": "nifti",
+    "source": "/my/rawdata/bigbrain/full8_400um_RAS.nii.gz",
+    "descr": "BigBrain silver stained (Merker) volume, converted to 8-bit grayscale, downsampled to 400μm.",
+    "pctile": "0-100",
+    "shareAsNifti": {
+      "downsample": [1,2]
+    }
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/rawdata/bigbrain/full_cls_400um.nii.gz",
+    "descr": "BigBrain tissue classification 2013, downsampled to 400μm.",
+    "shareAsNifti": {
+      "downsample": [1,2]
+    }
+  }],
+  "sliceRange": [377,8,-3],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species":"Human",
+    "age": "65",
+    "sex": "female",
+    "nlxName":"Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Bigbrain resampled at 400 μm",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to origin",
+    "whiteMatterAcronyms": ["WM"],
+    "plugins":[],
+    "aboutHtml":[
+      "BigBrain is a high-resolution 3D digital atlas of the human brain, resulting from a joint effort of the Montreal Neurological Institute and the Forschungszentrum Jülich. It was released in June 2013 as part of the European Human Brain Project.",
+      "It consists of 7,404 coronal sections, each 20 µm thick, silver stained using the Merker method that darkens neuronal cell bodies. The slices have been digitized at 20 µm resolution and reconstructed back into a volume, thereby correcting for tears, shifts and deformations.",
+      "This Scalable Brain Atlas template shows a 400 µm downsampled version of the Bigbrain data. The full resolution atlas is available at <a href=\"https://bigbrain.loris.ca/main.php\">bigbrain.loris.ca</a>."
+    ],
+    "definingCitations":[{
+      "authors":["Amunts K","Lepage C","Borgeat L","Mohlberg H","Dickscheid T","Rousseau MÉ","Bludau S","Bazin PL","Lewis LB","Oros-Peusquens AM","Shah NJ","Lippert T","Zilles K","Evans AC"],
+      "title":"BigBrain: an ultrahigh-resolution 3D human brain model.",
+      "journal":"Science",
+      "year":"2013",
+      "volume":"340(6139)",
+      "pages":"1472-5",
+      "doi":"10.1126/science.1235381"
+    }]
+  }
+}

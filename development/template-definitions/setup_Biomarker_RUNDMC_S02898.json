@@ -1,0 +1,45 @@
+{
+  "ID":"Biomarker_RUNDMC_S02898",
+  "delineationFormat": "nifti",
+  "delineationSource": "/mnt/DATA/DATA/RUNDMC20atlas/S02898_E03402/sub_2BB7C275C4A5952C.sub_2BB7C275C4A5952C_ses_E1777C887E76D301.atlas.hippo.nii.gz",
+  "delineationParams": {
+    "background":"0",
+    "curveTolerance": "0.5",
+    "lineTolerance": "0.0"
+  },
+  "hullFormat": "nifti",
+  "hullSource": "/mnt/DATA/DATA/RUNDMC20atlas/S02898_E03402/sub_2BB7C275C4A5952C.sub_2BB7C275C4A5952C_ses_E1777C887E76D301.brainmask.nii.gz",
+  "metadataFormat": "json",
+  "metadataSource": "/my/htdocs/scalablebrainatlas/development/Biomarker/template",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "T1",
+    "format": "nifti",
+    "source": "/mnt/DATA/DATA/RUNDMC20atlas/S02898_E03402/sub_2BB7C275C4A5952C.sub_2BB7C275C4A5952C_ses_E1777C887E76D301.nuc_scan.nii.gz",
+    "pctile": "0.1-99.9"
+  }],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species":"Human",
+    "age": "?",
+    "sex": "?",
+    "nlxName":"Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Automatic segmentation of the hippocampus",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":[]
+  }
+}

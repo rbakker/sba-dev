@@ -1,0 +1,93 @@
+{
+  "ID":"CBCetal15",
+  "delineationFormat": "nifti",
+  "delineationSource": "/tmp/CBCetal15/civm_rhesus_v1_labels.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "origin": [200,310,144]
+  },
+  "metadataFormat": "civm4_tsv",
+  "metadataSource": "/tmp/CBCetal15/civm_rhesus_v1_ontology_rb.tsv",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "GRE",
+    "descr": "Gradient Echo",
+    "format": "nifti",
+    "source": "/tmp/CBCetal15/civm_rhesus_v1_gre.nii.gz",
+    "pctile": "0.1-99.9",
+    "origin": [400,620,288],
+    "shareAsNifti *temporarily disabled*": {
+      "downsample":[2,4]
+    }
+  },{
+    "name": "FA",
+    "descr": "Fractional Anisotropy",
+    "format": "nifti",
+    "source": "/tmp/CBCetal15/civm_rhesus_v1_fac.nii.gz",
+    "pctile": "0-99",
+    "origin": [200,310,144],
+    "shareAsNifti": {
+      "downsample":[1,2]
+    }
+  },{
+    "name": "DWI",
+    "descr": "Diffusion Weighted Image",
+    "format": "nifti",
+    "source": "/tmp/CBCetal15/civm_rhesus_v1_dwi.nii.gz",
+    "pctile": "0.1-99.9",
+    "origin": [200,310,144],
+    "shareAsNifti": {
+      "downsample":[1,2]
+    }
+  },{
+    "name": "b0",
+    "descr": "b0 (T2-like) Image",
+    "format": "nifti",
+    "source": "/tmp/CBCetal15/civm_rhesus_v1_b0.nii.gz",
+    "pctile": "0.1-99.9",
+    "origin": [200,310,144],
+    "shareAsNifti": {
+      "downsample":[1,2]
+    }
+  },{
+    "name": "labels",
+    "descr": "Atlas labels",
+    "format": "nifti",
+    "source": "/tmp/CBCetal15/civm_rhesus_v1_labels.nii.gz",
+    "origin": [200,310,144],
+    "colormap": "../templates/CBCetal15/coronal_png/index2rgb.json",    
+    "shareAsNifti": {
+      "downsample":[1,2]
+    }
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Macaque",
+    "templateName": "Calabrese et al. (2015) DTI atlas with Paxinos brain regions",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": ["cwm"],
+    "plugins":[],
+    "aboutHtml":[
+      "The <a href=\"http://dx.doi.org/10.1016/j.neuroimage.2015.05.072\">Calabrese et al. (2015)</a> MRI and DTI atlas is based on 0.075 mm MRI and 0.15 mm DTI images, averaged over 10 macaques in the age range 1.8 to 11 years and body weight range 2.2 to 10 kg. The near-microscopic resolution is made possible by using postmortem brains immersed in contrast enhancing agents, a high magnetic field strength (7T), a 65mm diameter RF coil, and long scan times (46h for MRI+DTI).<br/>The atlas segmentation contains 241 anatomic labels and is largely consistent with the <a href=\"http://www.sciencedirect.com/science/article/pii/S1053811915004620#bb0220\">Paxinos et al. (2009)</a> Nissl based atlas.<br/>The brain region hierarchy is that of <a href=\"http://dx.doi.org/10.1016/j.tins.2013.06.004\">Puelles et al., (2013)</a>.<br/>Average atlas templates for eight image contrasts are available for download (academic use only) at the Duke University <a href=\"http://www.civm.duhs.duke.edu/rhesusatlas/\">CIVM</a> archive.<br/>The data was obtained at the Center for In Vivo Microscopy at Duke University Medical Center, under the supervision of <a href=\"http://bme.duke.edu/faculty/g-allan-johnson\">Allan Johnson</a>."
+    ],
+    "definingCitations":[{
+      "authors":["Calabrese E","Badea A","Coe CL","Lubach GR","Shi Y","Styner MA","Johnson A"],
+      "year":"2015",
+      "title":"A diffusion tensor MRI atlas of the postmortem rhesus macaque brain",
+      "journal":"Neuroimage",
+      "volume":"117",
+      "pages":"408–416",
+      "doi":"10.1016/j.neuroimage.2015.05.072"
+    }]
+  }
+}

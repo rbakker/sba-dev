@@ -1,0 +1,53 @@
+{
+  "ID":"RMJetal13_age_P72",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/dti_rat_atlas/segmentation_P72_origin.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "ITK-SnAP",
+  "metadataSource": "/my/rawdata/dti_rat_atlas/labels_unique.lbl",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "DTI",
+    "format": "nifti",
+    "source": "/home/rbakker/rawdata/dti_rat_atlas/template_P72_origin.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "3D DTI RARE, 9.4 T scanner, TR = 700 ms; effective TE = 23.662 ms; RARE echo spacing = 11.9 ms"
+  }],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Rat",
+    "strain":"Sprague Dawley",
+    "age":"P72",
+    "gender": "female",
+    "nlxName":"Sprague Dawley",
+    "nlxId":"birnlex_266",
+    "ncbiName":"Rattus norvegicus",
+    "ncbiId":"10116",
+    "templateName": "DTI Atlas of the P72 Rat Brain (Rumple et al. 2013)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm from center",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to center",
+    "whiteMatterAcronyms": [],
+    "plugins":[],
+    "definingCitations":[{ 
+      "authors": ["Rumple A","McMurray M","Johns J","Lauder J","Makam P","Radcliffe M","Oguz I"], 
+      "title": "3-dimensional diffusion tensor imaging (DTI) atlas of the rat brain.",
+      "journal": "PLoS One",
+      "volume":"8(7)",
+      "year": "2013", 
+      "doi": "10.1371/journal.pone.0067334"
+    }],
+    "aboutHtml":["The atlas data sources are available as the <a href=\"http://www.nitrc.org/projects/dti_rat_atlas/\">dti_rat_atlas</a> project on NITRC."]
+  }
+}

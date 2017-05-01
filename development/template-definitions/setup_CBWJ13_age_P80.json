@@ -1,0 +1,63 @@
+{
+  "ID":"CBWJ13_age_P80",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/sba-dev/CBWJ13_age_P80/pnd80_average_labels.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "reorient":"-j-i+k"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/sba-dev/CBWJ13_age_P80",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+		"name": "GRE",
+		"format": "nifti",
+		"source": "/my/sba-dev/CBWJ13_age_P80/p80_average_gre.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "GRE",
+    "reorient":"-j-i+k",
+    "shareAsNifti":{
+      "downsample": [2,3]
+    }
+	}],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Rat",
+    "strain":"Sprague Dawley",
+    "age":"?",
+    "gender": "?",
+    "nlxName":"Sprague Dawley",
+    "nlxId":"birnlex_266",
+    "ncbiName":"Rattus norvegicus",
+    "ncbiId":"10116",
+    "templateName": "MRH Atlas of the developing brain: P80",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm from center",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to center",
+    "whiteMatterAcronyms": [],
+    "plugins":[],
+    "definingCitations":[{ 
+      "authors": ["Calabrese E","Badea A","Watson C","Johnson GA"], 
+      "title": "A quantitative magnetic resonance histology atlas of postnatal rat brain development with regional estimates of growth and variability.",
+      "journal": "Neuroimage",
+      "volume":"71",
+      "pages":"196-206",
+      "year": "2013",
+      "doi": "10.1016/j.neuroimage.2013.01.017"
+    }],
+    "aboutHtml": [
+      "The GRE data is a downscaled and compressed version of the dataset \"Postnatal day 80 average gradient recalled echo image (25 microns isotropic)\", use the CIVM plugin to access full resolution data.",
+      "Abbreviations for the delineated regions are taken from the <a href=\"http://braininfo.rprc.washington.edu/nnont.aspx\">NeuroNames ontology 2012</a>, except for those in between square brackets.",
+      "The ac origin is defined as \"Junction of the rostral and dorsal tangential planes of the anterior commissure with the mid-sagittal plane\", and corresponds to voxel [953,340,379] in the original NIFTI dataset (counting the first voxel in each dimension as 1)."
+    ]
+  }
+}

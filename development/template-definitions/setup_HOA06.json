@@ -1,0 +1,77 @@
+{
+  "ID":"HOA06",
+  "delineationFormat": "nifti",
+  "delineationSource": "/home/rbakker/rawdata/HarvardOxford/HarvardOxford/HarvardOxford-cort-maxprob-thr0-1mm_smooth121.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/home/rbakker/rawdata/HarvardOxford",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "labels",
+    "descr": "Atlas labels",
+    "format": "nifti",
+    "source": "/home/rbakker/rawdata/HarvardOxford/HarvardOxford/HarvardOxford-cort-maxprob-thr0-1mm.nii.gz",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"alpha",
+    "species": "Human",
+    "templateName": "Harvard-Oxford atlas as distributed with FSL",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":[],
+    "aboutHtml":[
+      "The Harvard-Oxford atlas is developed at the Center for Morphometric Analysis (CMA), and distributed with the <a href=\"http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL\">FMRIB Software Library (FSL)</a>.",
+      "It comes with a probability distribution for each brain region, on display here is the cortical parcellation obtained from the Maximum A posteriori (MAP) estimate,"
+    ],
+    "licenceHtml":[
+      "Publications using the Harvard-Oxford atlas must acknowledge the data as follows:",
+      "\"We are very grateful for the training data for FIRST, particularly to David Kennedy at the CMA, and also to: Christian Haselgrove, Centre for Morphometric Analysis, Harvard; Bruce Fischl, Martinos Center for Biomedical Imaging, MGH; Janis Breeze and Jean Frazier, Child and Adolescent Neuropsychiatric Research Program, Cambridge Health Alliance; Larry Seidman and Jill Goldstein, Department of Psychiatry of Harvard Medical School; Barry Kosofsky, Weill Cornell Medical Center.\"",
+      "The defining citations document the original material."
+    ],
+    "definingCitations":[{
+      "authors":["Makris N","Goldstein JM","Kennedy D","Hodge SM","Caviness VS","Faraone SV","Tsuang MT","Seidman LJ"],
+      "year":"2006",
+      "title":"Decreased volume of left and total anterior insular lobule in schizophrenia.",
+      "journal":"Schizophr Res.",
+      "volume":"83(2-3)",
+      "pages":"155-171",
+      "doi":"10.1016/j.schres.2005.11.020"
+    },{
+      "authors":["Frazier JA","Chiu S","Breeze JL","Makris N","Lange N","Kennedy DN","Herbert MR","Bent EK","Koneru VK","Dieterich ME","Hodge SM","Rauch SL","Grant PE","Cohen BM","Seidman LJ","Caviness VS","Biederman J"],
+      "year":"2005",
+      "title":"Structural brain magnetic resonance imaging of limbic and thalamic volumes in pediatric bipolar disorder.",
+      "journal": "Am J Psychiatry",
+      "volume":"162(7)",
+      "pages":"1256-1265"
+    },{
+      "authors":["Desikan RS","Ségonne F","Fischl B","Quinn BT","Dickerson BC","Blacker D","Buckner RL","Dale AM","Maguire RP","Hyman BT","Albert MS","Killiany RJ"],
+      "title":"An automated labeling system for subdividing the human cerebral cortex on MRI scans into gyral based regions of interest.",
+      "journal":"Neuroimage",
+      "year":"2006",
+      "volume":"31(3)",
+      "pages":"968-980"
+    },{
+      "authors":["Goldstein JM","Seidman LJ","Makris N","Ahern T","O'Brien LM","Caviness VS Jr","Kennedy DN","Faraone SV","Tsuang MT"],
+      "title":"Hypothalamic abnormalities in schizophrenia: sex effects and genetic vulnerability.",
+      "journal":"Biol Psychiatry",
+      "year":"2007",
+      "volume":"61(8)",
+      "pages":"935-945"
+    }]
+  }
+}

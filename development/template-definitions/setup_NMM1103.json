@@ -1,0 +1,69 @@
+{
+  "ID":"NMM1103",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/DATA/SBA/NeuroMM/corrected_sba/1103_3_glm.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "0.5",
+    "lineTolerance": "0.2",
+    "background": "0"
+  },
+  "metadataFormat": "nmm_xml",
+  "metadataSource": "/my/DATA/SBA/NeuroMM/corrected_sba/1103_3_glm_LabelMap_RB.xml",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "T1",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/NeuroMM/corrected_sba/1103_3.nii.gz",
+    "descr": "T1 MRI, scan 'OAS1_0340_MR1' from the OASIS 'Cross-sectional' set.",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/NeuroMM/corrected_sba/1103_3_glm.nii.gz",
+    "descr": "Labels according to the General and BrainCOLOR segmentation protocols.",
+    "colormap": "../templates/NMM1103/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[1]
+    }    
+  }],
+  "meshdata":[{
+    "region":"midcortexL",
+    "space":"NMM1103_freesurfer"
+  },{
+    "region":"pialL",
+    "space":"NMM1103_freesurfer"
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species":"Human",
+    "nlxName":"Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Neuromorphometrics Inc. manually segmented brain",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to origin",
+    "whiteMatterAcronyms": ["Cerebral White Matter (L)","Cerebral White Matter (R)"],
+    "plugins":[],
+    "aboutHtml":[
+      "<div style=\"height:2em;top:-45px;overflow:visible\">This <a href=\"http:\/\/www.neuromorphometrics.com\/?page_id=310\">labeled brain scan<\/a> was created by <b><a href=\"http:\/\/www.neuromorphometrics.com\"><img src=\"..\/templates\/NMM1103\/BrainOutline120x120TransBack.png\" alt=\"Neuromorphometrics logo\" style=\"width:60px;top:15px\"\/> Neuromorphometrics, Inc.<\/a><\/b>, following the methods described in <a href=\"http://dx.doi.org/10.1016/S0387-7604(99)00022-4\">Caviness Jr. et al. 1999</a>.</div>",
+      "The original T1 MRI scan is \u2018OAS1_0340_MR1\u2019 from the 'Cross-sectional\u2019 set in the <a href=\"http:\/\/www.oasis-brains.org\">Open Access Series of Imaging Studies<\/a> (OASIS).",
+      "Two labeling protocols were used:<ol><li><a href=\"http://www.cma.mgh.harvard.edu/manuals/segmentation/\">General Segmentation</a> from the Harvard\/Massachusetts General Hospital Center for Morphometric Analysis,</li><li><a href=\"http://braincolor.mindboggle.info/docs\/BrainCOLOR_cortical_parcellation_protocol.pdf\">BrainCOLOR</a> Cortical Parcellation.</li></ol><p/>If you use this atlas in a publication, cite <i>Neuromorphometrics, Inc.<\/i> as the source of the labeled brain."
+    ],
+    "licenseUrl":"http://www.neuromorphometrics.com/wp-content/uploads/2013/06/NVM_Demo_License2013_v1.txt",
+    "definingCitations":[{
+      "title":"Cite 'Neuromorphometrics, Inc.' as the source of the labeled brain."
+    }]
+  }
+}

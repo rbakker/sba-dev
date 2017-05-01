@@ -1,0 +1,93 @@
+{
+  "ID":"VSNetal11",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/VSNetal11/atlas-nmdrat30_ras.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "background": 0
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/rawdata/VSNetal11",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "T2w",
+    "format": "nifti",
+    "source": "/my/rawdata/VSNetal11/head_rat_ras.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "T2-weighted MRI, whole head; TR 10971ms; TEeff = 30 ms; RARE factor 4.",
+    "shareAsNifti": {
+      "downsample":[1]
+    }    
+  },{
+    "name": "T2w (no skull)",
+    "format": "nifti",
+    "source": "/my/rawdata/VSNetal11/brain-nmdrat30_ras.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "T2-weighted MRI, skull-stripped; TR 10971ms; TEeff = 30 ms; RARE factor 4.",
+    "shareAsNifti": {
+      "downsample":[1]
+    }    
+  },{
+    "name": "csf",
+    "format": "nifti",
+    "source": "/my/rawdata/VSNetal11/csf-nmdrat30_ras.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Cerebral spinal fluid (probabilistic)."
+  },{
+    "name": "gray",
+    "format": "nifti",
+    "source": "/my/rawdata/VSNetal11/gray-nmdrat30_ras.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Gray matter (probabilistic)."
+  },{
+    "name": "white",
+    "format": "nifti",
+    "source": "/my/rawdata/VSNetal11/white-nmdrat30_ras.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "White matter (probabilistic)."
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/rawdata/VSNetal11/atlas-nmdrat30_ras.nii.gz",
+    "colormap": "../templates/VSNetal11/coronal_png/index2rgb.json",
+    "descr": "Labels after the Paxinos and Watson 2007 rat atlas."
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Rat",
+    "strain":"Wistar",
+    "gender":"male",
+    "age":"6 to 10 weeks",
+    "nlxName":"Wistar Rat",
+    "nlxId":"birnlex_254",
+    "ncbiName":"Rattus norvegicus",
+    "ncbiId":"10116",
+    "templateName": "An in vivo MRI Template (Valdés-Hernández, Sumiyoshi, Nonaka, et al. 2013)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": ["Brain mask_l","Brain mask_r"],
+    "plugins":[],
+    "definingCitations":[{ 
+      "authors": ["Valdés-Hernández PA","Sumiyoshi A","Nonaka H","Haga R","Aubert-Vásquez E","Ogawa T","Iturria-Medina Y","Riera JJ","Kawashima R"], 
+      "title": "An in vivo MRI template set for morphometry, tissue segmentation, and fMRI localization in rats",
+      "journal": "Front Neuroinform",
+      "volume":"5(26)",
+      "year": "2011", 
+      "doi": "10.3389/fninf.2011.00026"
+    }],
+    "aboutHtml": ["The modalities shown for this template are averaged across 30 brains, using a multi-resolution, multi-grid registration routine."]
+  }
+}

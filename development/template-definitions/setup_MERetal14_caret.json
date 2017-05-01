@@ -1,0 +1,53 @@
+{
+  "ID":"MERetal14_caret",
+  "delineationFormat": "nifti",
+  "delineationSource": "/mnt/231GB/Users/rbakker/DataSets/Caret/Markov_CC12_M132-on-F99.74k_f99/Macaque_M132_native_p2v085_141.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "origin": [96,111,56]
+  },
+  "metadataFormat": "json",
+  "metadataSource": "../MERetal14_caret",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/mnt/231GB/Users/rbakker/DataSets/Caret/Markov_CC12_M132-on-F99.74k_f99/Macaque_M132_native_p2v085.nii.gz",
+    "colormap": "../MERetal14_caret/coronal_png/index2rgb.json",
+    "origin": [96,111,56]
+  }],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Macaque",
+    "templateName": "testing...",
+    "hemisphere":"L",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":["bar3d"],
+    "aboutHtml":[
+      "Blah...The <a href=\"http://mouse.brain-map.org/atlas/index.html\">Allen Reference Atlas</a> is created by the <a href=\"http://www.brain-map.org/\">Allen Institute for Brain Science</a>. There are two variants of this atlas:",
+      "<ol><li>The manually annotated 'reference' atlas, published <a href=\"http://mouse.brain-map.org/atlas/ARA/Coronal/browser.html\">on the web</a> and in print: H.W. Dong, The Allen Reference Atlas, (Book + CD-ROM): A Digital Color Brain Atlas of the C57BL/6J Male Mouse, Wiley, 2008. This atlas has been symmetrized with respect to the midline.</li><li>The volumetric atlas, in which each brain region is represented by a set of closed volumes. This atlas is used to initiate coordinate- or structure name based queries into the AGEA gene expression database.</li></ol>",
+      "On display here is the second variant of the atlas, in the 2012 realignment. The manually annotated sections can be viewed using the \"AllenAtlas\" plugin.",
+      "The volumetric atlas also features in Allen Brain Institute's stand-alone software package <a href=\"http://mouse.brain-map.org/brainExplorer/index.html\">BrainExplorer</a>."
+    ],
+    "definingCitations":[{
+      "authors":["et al."],
+      "year":"2007",
+      "title":"Genome-wide ",
+      "journal":"Nature",
+      "volume":"445(7124)",
+      "pages":"168-76",
+      "doi":"10.1038/nature05453"
+    }]
+  }
+}

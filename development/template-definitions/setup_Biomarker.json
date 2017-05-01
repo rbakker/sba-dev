@@ -1,0 +1,53 @@
+{
+  "ID":"Biomarker",
+  "delineationFormat": "nifti",
+  "delineationSource": "/tmp/SBA_S02908/MS.nii.gz",
+  "delineationParams": {
+    "background":"0",
+    "curveTolerance": "0.5",
+    "lineTolerance": "0.0"
+  },
+  "hullFormat": "nifti",
+  "hullSource": "/tmp/SBA_S02908/Image_mask.nii.gz",
+  "metadataFormat": "json",
+  "metadataSource": "/tmp/SBA_S02908",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "NIJ",
+    "format": "nifti",
+    "source": "/tmp/SBA_S02908/AS_Nij.nii.gz"
+  },{
+    "name": "AMS",
+    "format": "nifti",
+    "source": "/tmp/SBA_S02908/AS_Ams.nii.gz"
+  },{
+    "name": "T1",
+    "format": "nifti",
+    "source": "/tmp/SBA_S02908/Image_image.nii.gz",
+    "pctile": "0.1-99.9"
+  }],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species":"Human",
+    "age": "?",
+    "sex": "?",
+    "nlxName":"Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Automatic segmentation of the hippocampus",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":[]
+  }
+}

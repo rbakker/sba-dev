@@ -1,0 +1,70 @@
+{
+  "ID":"WHS12_with_PLCJB14",
+  "defineTransformations":{
+    "PLCJB14_to_WHS12":{
+      "fixed":"http://localhost/incf/scalablebrainatlas/WHS12new/source/CT2starWarped2T1_downsample2_masked.nii.gz",
+      "moving":"/mnt/231GB/DATA/WHS_SD_rat/WHS_SD_rat_T2star_v1.01_masked.nii.gz",
+      "program": "elastix",
+      "paramfiles": [
+        "http://localhost/incf/scalablebrainatlas/elastix/Par0000affine.txt",
+        "http://localhost/incf/scalablebrainatlas/elastix/Par0000bspline_stefan.txt"
+      ]
+    }
+  },
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/WHS_Rat/WHS_SD_rat_atlas_v1.01_121.nii.gz",
+  "delineationParams": {
+    "applyTransformation":"PLCJB14_to_WHS12",
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "ITK-SnAP",
+  "metadataSource": "/my/rawdata/WHS_Rat/WHS_SD_rat_atlas_v1_hier.label",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "Mouse-T1",
+    "format": "nifti",
+    "source": "http://localhost/incf/scalablebrainatlas/WHS12/source/canon_T1_r_downsample2.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr":"WHS-mouse T1, downsampled by factor 2."
+  },{
+    "name": "Mouse-T2*",
+    "format": "nifti",
+    "source": "http://localhost/incf/scalablebrainatlas/WHS12/source/CT2starWarped2T1_downsample2.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr":"WHS-mouse T2*, downsampled by factor 2."
+  },{
+    "name": "Rat-T2*",
+    "applyTransformation":"PLCJB14_to_WHS12",
+    "format": "nifti",
+    "source": "/mnt/231GB/DATA/WHS_SD_rat/WHS_SD_rat_T2star_v1.01.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Rat anatomical MRI, T2*-weighted gradient echo image at 39 μm original resolution (512x1024x512 voxels)"
+  },{
+    "name": "Mouse-labels",
+    "format": "nifti",
+    "source": "/my/htdocs/incf/development/WHS12new/source/WHS_0_6_1_Labels_downsample2.nii.gz",
+    "colormap": "../WHS12new/coronal_png/index2rgb.json",
+    "descr": "WHS-mouse labels, downsamples by a factor 2"
+  }],  
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Mouse",
+    "templateName": "WHS-Rat delineation in WHS-Mouse space",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":["landmarks"],
+    "aboutHtml":[
+    ],
+    "definingCitations":[]
+  }
+}

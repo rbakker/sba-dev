@@ -1,0 +1,39 @@
+UNDER CONSTRUCTION
+{
+  "species": "Human",
+  "templateName": "Brodmann 05 mapped onto Conte69 (2012)",
+  "atlasSpace":"Conte69",
+  "delineationFormat": "nifti_coarse",
+  "delineationSource": "C:/Users/rbakker/DataSets/Caret/atlas_Conte69_164k_fs_LR/Human_Conte69_L_brodmann_paint_to_volume.nii",
+  "delineationBackground": "#FFFFFF",
+  "hullFormat": "nifti",
+  "hullSource": "C:/Users/rbakker/DataSets/Caret/atlas_Conte69_164k_fs_LR/Human_Conte69_L_hull.nii",
+  "metadataFormat": "caret",
+  "metadataSource": "Human.Conte69.L.brodmann_paint_to_volume.ifh",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+	"overlays":[{
+  	"name": "T1w",
+		"format": "nifti",
+		"source": "C:/Users/rbakker/DataSets/Caret/atlas_Conte69_164k_fs_LR/Conte69_AverageT1w.nii"
+	},{
+  	"name": "T2w",
+		"format": "nifti",
+		"source": "C:/Users/rbakker/DataSets/Caret/atlas_Conte69_164k_fs_LR/Conte69_AverageT2w.nii"
+  },{
+  	"name": "T1w_T2w",
+		"format": "nifti",
+		"source": "C:/Users/rbakker/DataSets/Caret/atlas_Conte69_164k_fs_LR/Conte69_MyelinMapping_AverageT1w.nii.nii"
+  },{
+  	"name": "labels",
+		"format": "nifti",
+		"source": "C:/Users/rbakker/DataSets/Caret/atlas_Conte69_164k_fs_LR/Human_Conte69_L_brodmann_paint_to_volume.nii",
+		"colormap":"global"
+  }],  
+  "sliceRange": [196,21,-1],
+  "slicePositionLabel":"",
+  "slicePositionUnit":"mm ant. ac",
+  "slicePositionDescription":"posterior(-) or anterior(+) distance to center of anterior commissure",
+  "whiteMatterAcronyms": [],
+  "svgTracingMethod": "corel"
+}

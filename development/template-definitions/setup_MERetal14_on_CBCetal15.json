@@ -1,0 +1,65 @@
+{
+  "ID":"MERetal14_on_CBCetal15",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/htdocs/scalablebrainatlas/development/corenets/MERetal14_on_CBCetal15_f3d_232.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "origin": [180, 0, 224]
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/htdocs/scalablebrainatlas/development/corenets",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "labels",
+    "descr": "Atlas labels",
+    "format": "nifti",
+    "source": "/my/htdocs/scalablebrainatlas/development/corenets/MERetal14_on_CBCetal15_f3d.nii.gz",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  },{
+    "name": "CBCetal15 labels",
+    "descr": "Labels from Calabrese et al. (2015)",
+    "format": "nifti",
+    "source": "/my/htdocs/scalablebrainatlas/templates/CBCetal15/source/civm_rhesus_v1_labels.nii.gz"
+  }],
+  "meshdata":[{
+    "region":"wholebrain",
+    "space":"CBCetal15"
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Macaque",
+    "strain":"Macaque Cynomolgus",
+    "nlxName":"Long-tailed macaque",
+    "nlxId":"birnlex_291",
+    "ncbiName":"Macaca fascicularis",
+    "ncbiId":"1215360",
+    "templateName": "Markov et al. (2014) 91 cortical regions atlas, warped to CBCetal15 space",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm from posterior",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":["MERetal14"],
+    "aboutHtml":[
+      "This is a warped version of the atlas by <a href=\"http://dx.doi.org/10.1093/cercor/bhs270\">Markov et al. (2014)</a>.<br/>It is also available <a href=\"../../MERetal14\">in native space</a>."
+    ],
+    "definingCitations":[{
+      "authors":["Markov NT","Ercsey-Ravasz MM","Ribeiro Gomes AR","Lamy C","Magrou L","Vezoli J","Misery P","Falchier A","Quilodran R","Gariel MA","Sallet J","Gamanut R","Huissoud C","Clavagnier S","Giroud P","Sappey-Marinier D","Barone P","Dehay C","Toroczkai Z","Knoblauch K","Van Essen DC","Kennedy H"],
+      "year":"2014",
+      "title":"A weighted and directed interareal connectivity matrix for macaque cerebral cortex.",
+      "journal":"Cereb Cortex",
+      "volume":"24(1)",
+      "pages":"17-36",
+      "doi":"10.1093/cercor/bhs270"
+    }]
+  }
+}

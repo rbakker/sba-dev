@@ -1,0 +1,183 @@
+{
+  "ID":"LSMetal15",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/DATA/SBA/LSMetal15/templatelabels.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "0.5",
+    "lineTolerance": "0.2",
+    "background": "0"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/DATA/SBA/BN274",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "T1",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/BN274/BN_Atlas_274_T1_HCP40_MNI_1.25mm.nii.gz",
+    "descr": "Average of 40 T1 images from the Human Connectome Project",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/BN274/BN_Atlas_274_noCb_uint16.nii.gz",
+    "descr": "Parcellation based on connectivity profiles.",
+    "colormap": "../templates/BN274/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[1]
+    }    
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species":"Sheep",
+    "nlxName":"Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Corriedale Ovine Brain Atlas of Liyanage et al. (2015)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to origin",
+    "whiteMatterAcronyms": [],
+    "plugins":["BN274"],
+    "aboutHtml":[
+      "Brain atlases play a central role in neuroscientific and clinical practice, and are a prerequisite for studying brain networks across scales. Many current human brain atlases only cover specific structures, lack fine-grained parcellations, and fail to provide functionally important connectivity information. The Brainnetome Atlas (BNA) is built upon a connectivity-based parcellation framework, derived from non-invasive multimodal neuroimaging techniques.",
+      "The atlas has the following features: <ol><li>It establishes a fine-grained brain parcellation scheme for 210 cortical, 36 subcortical and 28 cerebellar regions.<\/li><li>It supplies a detailed map of anatomical and functional connections.<\/li><li>It decodes brain functions using a meta-analytical approach.<\/li><li>It is an open resource for researchers to use for the analysis of whole brain parcellations, connections, and functions.<\/li><\/ol>",
+      "The BNA has been created at the Brainnetome Center, Institute of Automation, Chinese Academy of Sciences. To facilitate future investigations in healthy and pathological states, the atlas and accompanying software is made freely <a href=\"http:\/\/atlas.brainnetome.org\">available for download</a>."
+    ],
+    "licenseUrl":null,
+    "definingCitations":[{
+      "authors":[
+        "Fan L","Li H","Zhuo J","Zhang Y","Wang J","Chen L","Yang Z","Chu C","Xie S","Laird AR","Fox PT","Eickhoff SB","Yu C","Jiang T"
+      ],
+      "year": "2016",
+      "title":"The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture.",
+      "journal":"Cerebral Cortex",
+      "doi":"10.1093/cercor/bhw157"
+    }],
+    "otherCitations":[{
+      "authors":["Zhuo J","Fan L","Liu Y","Zhang Y","Yu C","Jiang T"],
+      "year": "2016",
+      "title": "Connectivity Profiles Reveal a Transition Subarea in the Parahippocampal Region That Integrates the Anterior Temporal–Posterior Medial Systems.",
+      "journal":"Journal of Neuroscience",
+      "volume": "36",
+      "pages":"2782-2795",
+      "doi":"10.1523/jneurosci.1975-15.2016"
+    },{
+      "authors":["Zhang W","Wang J","Fan L","Xu J","Li C","Liu Y","Fox PT","Eickhoff SB","Yu C","Jiang T"],
+      "year":"2016",
+      "title":"Functional organization of the fusiform gyrus revealed with connectivity profiles.",
+      "journal":"Human brain mapping",
+      "doi":"10.1002/hbm.23222"
+    },{
+      "authors":["Yang Y","Fan L","Chu C","Zhuo J","Wang J","Fox PT","Eickhoff SB","Jiang T"],
+      "year":"2016",
+      "title":"Identifying functional subdivisions in the human brain using meta-analytic activation modeling-based parcellation.",
+      "journal":"Neuroimage",
+      "volume":"124",
+      "pages":"300-309",
+      "doi":"10.1016/j.neuroimage.2015.08.027"
+    },{
+      "authors":["Cui Y","Liu B","Zhou Y","Fan L","Li J","Zhang Y","Wu H","Hou B","Wang C","Zheng F","Qiu C","Rao LL","Ning Y","Li S","Jiang T"],
+      "year":"2015",
+      "title":"Genetic Effects on Fine-Grained Human Cortical Regionalization.",
+      "journal":"Cerebral Cortex",
+      "doi":"10.1093/cercor/bhv176"
+    },{
+      "authors":["Wang J","Yang Y","Fan L","Xu J","Li C","Liu Y","Fox PT","Eickhoff SB","Yu C","Jiang T"],
+      "year":"2015",
+      "title":"Convergent functional architecture of the superior parietal lobule unraveled with multimodal neuroimaging approaches.",
+      "journal":"Human brain mapping",
+      "volume":"36",
+      "pages":"238-257",
+      "doi":"10.1002/hbm.22626"
+    },{
+      "authors":["Wang J","Fan L","Wang Y","Xu W","Jiang T","Fox PT","Eickhoff SB","Yu C","Jiang T"],
+      "year":"2015",
+      "title":"Determination of the posterior boundary of Wernicke's area based on multimodal connectivity profiles.",
+      "journal":"Human brain mapping",
+      "volume":"36",
+      "pages":"1908-1924",
+      "doi":"10.1002/hbm.22745"
+    },{
+      "authors":["Zhang Y","Caspers S","Fan L","Fan Y","Song M","Liu C","Mo Y","Roski C","Eickhoff S","Amunts K","Jiang T"],
+      "year":"2015",
+      "title":"Robust brain parcellation using sparse representation on resting-state fMRI.",
+      "journal":"Brain Structure and Function",
+      "volume":"220(6)",
+      "pages":"3565-79",
+      "doi":"10.1007/s00429-014-0874-x"
+    },{
+      "authors":["Xu J","Wang J","Fan L","Li H","Zhang W","Hu Q","Jiang T"],
+      "year":"2015",
+      "title":"Tractography-based Parcellation of the Human Middle Temporal Gyrus.",
+      "journal":"Scientific reports",
+      "doi":"10.1038/srep18883"
+    },{
+      "authors":["Liu H","Qin W","Qi H","Jiang T","Yu C"],
+      "year":"2015",
+      "title":"Parcellation of the human orbitofrontal cortex based on gray matter volume covariance.",
+      "journal":"Human brain mapping",
+      "volume":"36",
+      "pages":"538-548",
+      "doi":"10.1002/hbm.22645"
+    },{
+      "authors":["Fan L","Wang J","Zhang Y","Han W","Yu C","Jiang T"],
+      "year":"2014",
+      "title":"Connectivity-based parcellation of the human temporal pole using diffusion tensor imaging.",
+      "journal":"Cerebral cortex",
+      "volume":"24",
+      "pages":"3365-3378",
+      "doi":"10.1093/cercor/bht196"
+    },{
+      "authors":["Zhang Y","Fan L","Zhang Y","Wang J","Zhu M","Zhang Y","Yu C","Jiang T"],
+      "year":"2014",
+      "title":"Connectivity-based parcellation of the human posteromedial cortex.",
+      "journal":"Cerebral cortex",
+      "volume":"24",
+      "pages":"719-727",
+      "doi":"10.1093/cercor/bhs353"
+    },{
+      "authors":["Li W","Qin W","Liu H","Fan L","Wang J","Jiang T","Yu C"],
+      "year":"2013",
+      "title":"Subregions of the human superior frontal gyrus and their connections.",
+      "journal":"Neuroimage",
+      "volume":"78",
+      "pages":"46-58",
+      "doi":"10.1016/j.neuroimage.2013.04.011"
+    },{
+      "authors":["Liu H","Qin W","Li W","Fan L","Wang J","Jiang T","Yu C"],
+      "year":"2013",
+      "title":"Connectivity-based parcellation of the human frontal pole with diffusion tensor imaging.",
+      "journal":"Journal of neuroscience",
+      "volume":"33",
+      "pages":"6782-6790",
+      "doi":"10.1523/jneurosci.4882-12.2013"
+    },{
+      "authors":["Jiang T"],
+      "year":"2013",
+      "title":"Brainnetome: a new -ome to understand the brain and its disorders.",
+      "journal":"Neuroimage",
+      "volume":"80",
+      "pages":"263-272",
+      "doi":"10.1016/j.neuroimage.2013.04.002"
+    },{
+      "authors":["Wang J","Fan L","Zhang Y","Liu Y","Jiang D","Zhang Y","Yu C","Jiang T"],
+      "year":"2012",
+      "title":"Tractography‐based parcellation of the human left inferior parietal lobule.",
+      "journal":"Neuroimage",
+      "volume":"63",
+      "pages":"641-652",
+      "doi":"10.1016/j.neuroimage.2012.07.045"
+    }]
+  }
+}

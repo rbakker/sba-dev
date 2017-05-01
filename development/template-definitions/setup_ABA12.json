@@ -1,0 +1,67 @@
+{
+  "ID":"ABA12_new",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/ABA_BrainExplorer/Annotation2014_141.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "ABA_v2",
+  "metadataSource": "../../templates/ABA12/ontology_v2.csv",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "Nissl",
+    "format": "nifti",
+    "source": "/my/rawdata/ABA_BrainExplorer/Atlas2014.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[1,2]
+    }
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/rawdata/ABA_BrainExplorer/Annotation2014.nii.gz",
+    "colormap": "../templates/ABA12_new/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[1,2]
+    }
+  }],
+  "superzoom":[{
+    "name": "Nissl",
+    "format": "jpg",
+    "source": "/my/DATA/ABA_mouse_Nissl/nissl_%04d.jpg" 
+  }],
+  "sliceRange": [526,0,-4],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Mouse",
+    "templateName": "Allen Mouse Brain volumetric atlas 2012",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":["alleninst","bar3d","microdraw"],
+    "aboutHtml":[
+      "The <a href=\"http://mouse.brain-map.org/atlas/index.html\">Allen Reference Atlas</a> is created by the <a href=\"http://www.brain-map.org/\">Allen Institute for Brain Science</a>. There are two variants of this atlas:",
+      "<ol><li>The manually annotated 'reference' atlas, published <a href=\"http://mouse.brain-map.org/atlas/ARA/Coronal/browser.html\">on the web</a> and in print: H.W. Dong, The Allen Reference Atlas, (Book + CD-ROM): A Digital Color Brain Atlas of the C57BL/6J Male Mouse, Wiley, 2008. This atlas has been symmetrized with respect to the midline.</li><li>The volumetric atlas, in which each brain region is represented by a set of closed volumes. This atlas is used to initiate coordinate- or structure name based queries into the AGEA gene expression database.</li></ol>",
+      "On display here is the second variant of the atlas, in the 2012 realignment. The manually annotated sections can be viewed using the \"AllenAtlas\" plugin.",
+      "The volumetric atlas also features in Allen Brain Institute's stand-alone software package <a href=\"http://mouse.brain-map.org/brainExplorer/index.html\">BrainExplorer</a>."
+    ],
+    "definingCitations":[{
+      "authors":["Lein ES","Hawrylycz MJ","Ao N","et al."],
+      "year":"2007",
+      "title":"Genome-wide atlas of gene expression in the adult mouse brain.",
+      "journal":"Nature",
+      "volume":"445(7124)",
+      "pages":"168-76",
+      "doi":"10.1038/nature05453"
+    }]
+  }
+}

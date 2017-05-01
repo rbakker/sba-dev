@@ -1,0 +1,57 @@
+{
+  "ID":"DLSKH08",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/DATA/SBA/DLSKH08/Dorr_2008_labels_sba.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "1",
+    "lineTolerance": "0.25"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/DATA/SBA/DLSKH08",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "MRI",
+    "descr": "Average T2-weighted 3D fast spin-echo",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/DLSKH08/Dorr_2008_average.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  },{
+    "name": "labels",
+    "descr": "Hippocampal atlas + whole brain regions of Dorr et al. 2008",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/DLSKH08/Dorr_2008_labels_sba.nii.gz",
+    "colormap": "../templates/DLSKH08/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "sliceRange": null,
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"alpha",
+    "species": "Mouse",
+    "strain": "C57Bl/6J",
+    "templateName": "Hippocampal atlas by Dorr et al 2008",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to origin",
+    "whiteMatterAcronyms": [],
+    "plugins":[],
+    "aboutHtml":[
+      "See <a href=\"http://dx.doi.org/10.1016/j.neuroimage.2008.03.037\">Dorr et al., 2008</a>."
+    ],
+    "definingCitations":[{
+      "authors":["Dorr et al."],
+      "doi":"10.1016/j.neuroimage.2008.03.037"
+    }]
+  }
+}

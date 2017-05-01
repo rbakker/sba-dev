@@ -1,0 +1,50 @@
+{
+  "ID":"PHT00",
+  "delineationFormat": "pht00_svg",
+  "delineationSource": "/home/rbakker/rawdata/PHT00/manually_traced_coronal_svg/Figure %03d.svg",
+  "delineationParams": {
+    "crossHairColor":"#FFFF00",
+    "crossHairBoundingBox":[0,-40,-20,40],
+    "slicePos":"/home/rbakker/rawdata/PHT00/slicepos.json",
+    "flipLeftRight":true
+  },
+  "sliceRange": [1,151],
+  "metadataFormat": "pht00_csv",
+  "metadataSource": "/home/rbakker/rawdata/PHT00/!Paxinos_StructureList+_100302.csv",
+  "overlays":[{
+    "name": "labels",
+    "descr": "Atlas labels",
+    "format": "nifti",
+    "source": "/tmp/CBCetal15/civm_rhesus_v1_labels.nii.gz",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "config": {
+    "release":"beta",
+    "species": "Macaque",
+    "templateName": "Paxinos, Huang and Toga (2000) atlas [some subcortical regions missing]",
+    "hemisphere":"L",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to bregma",
+    "whiteMatterAcronyms": [],
+    "plugins":[],
+    "aboutHtml":[
+      "EMPTY"
+    ],
+    "definingCitations":[{
+      "authors":["Paxinos et al 2000"],
+      "year":"2000",
+      "title":"title",
+      "journal":"book",
+      "volume":"0",
+      "pages":"",
+      "doi":"??"
+    }]
+  }
+}

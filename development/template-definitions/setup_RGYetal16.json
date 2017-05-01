@@ -1,0 +1,55 @@
+{
+  "ID":"RGYetal16",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/DATA/Saleem_Macaque/macaqueatlas_1.1_final/D99_atlas_1.1_final.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/DATA/Saleem_Macaque",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "MRI",
+    "descr": "T1",
+    "pctile": "0.1-99.9",
+    "format": "nifti",
+    "source": "/my/DATA/Saleem_Macaque/macaqueatlas_1.1_final/D99_template.nii.gz",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "meshdata":[],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"alpha",
+    "species": "Macaque",
+    "templateName": "Saleem-Logothetis 3d template",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":[],
+    "aboutHtml":[
+      "The Saleem-Logothetis atlas is ..."
+    ],
+    "licenceHtml":[
+      "You may use ..."
+    ],
+    "definingCitations":[{
+      "authors":["Author1"],
+      "year":"year",
+      "title":"Title.",
+      "journal":"Journal.",
+      "volume":"Volume",
+      "pages":"Pages",
+      "doi":"DOI"
+    }]
+  }
+}

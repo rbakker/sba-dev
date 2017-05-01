@@ -1,0 +1,63 @@
+{
+  "ID":"NMM1103_freesurfer",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/DATA/SBA/NeuroMM/corrected_sba/ribbon-native.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "1",
+    "lineTolerance": "0.25",
+    "background": "0"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/DATA/SBA/NeuroMM/freesurfer_6beta",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"alpha",
+    "species":"Human",
+    "nlxName":"Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Freesurfer (version 6-beta) reconstruction of NMM1103 scan, in native coordinates.",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac.",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to origin",
+    "whiteMatterAcronyms": ["Left WM","Right WM"],
+    "plugins":[],
+    "aboutHtml":[
+      "This template is derived from NMM1103, by running the Freesurfer (version 6-beta) cortical reconstruction pipeline (command: recon-all)"
+    ],
+    "meshes": {
+      "midcortexL": {
+        "name": "left hemisphere, mid-cortical surface",
+        "deformations": {
+          "fiducial": {
+            "faces": "FS6beta_L_faces.csv",
+            "vertices": "FS6beta_mid_L_vertices.csv",
+            "vertexlimits": "FS6beta_mid_L_vertexlimits.csv"
+          },
+          "inflated": {
+            "faces": "FS6beta_L_faces.csv",
+            "vertices": "FS6beta_inflated_L_vertices.csv",
+            "vertexlimits": "FS6beta_inflated_L_vertexlimits.csv"
+          }
+        }
+      },
+      "pialL": {
+        "name": "left hemisphere, pial surface",
+        "deformations": {
+          "fiducial": {
+            "faces": "FS6beta_L_faces.csv",
+            "vertices": "FS6beta_pial_L_vertices.csv",
+            "vertexlimits": "FS6beta_pial_L_vertexlimits.csv"
+          }
+        }
+      }
+    },
+    "definingCitations":[]
+  }
+}

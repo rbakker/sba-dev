@@ -1,0 +1,60 @@
+{
+  "ID":"MERetal14_on_F99",
+  "delineationFormat": "nifti",
+  "delineationSource": "/home/rbakker/rawdata/MERetal14_on_F99/Macaque_F99_L_MERetal14_2x05_F99_smooth121.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/home/rbakker/rawdata/MERetal14_on_F99",
+  "overlays":[{
+    "name": "labels",
+    "descr": "labels obtained from cortical surface with constant thickness of 1mm",
+    "format": "nifti",
+    "source": "/home/rbakker/rawdata/MERetal14_on_F99/Macaque_F99_L_MERetal14_2x05_F99.nii.gz",
+    "colormap": "../templates/MERetal14/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "meshdata":[{
+    "region":"ctxL",
+    "space":"F99"
+  }],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Macaque",
+    "templateName": "Markov et al. (2014) 91 cortical regions atlas, registered to F99 space",
+    "hemisphere":"L",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm from posterior",
+    "slicePositionDescription":"anterior(+) distance",
+    "whiteMatterAcronyms": [],
+    "plugins":["MERetal14"],
+    "overlays":{
+      "T1":{
+        "source":"..\/F99\/coronal_T1\/Macaque_F99_LR_MRI_resampledF99_%04d.jpg",
+        "descr":"T1 scan case F99UA1, provided by M. Logothetis"
+      }
+    },
+    "aboutHtml":[
+      "The <a href=\"http://dx.doi.org/10.1093/cercor/bhs270\">Markov et al. (2014)</a> 91 cortical region atlas forms the basis of the 29x91 quantitative connectivity matrix published in the same publication.<br/>This page shows the atlas after applying surface-based registration to map its mid-cortical surface to the \"F99\" reference cortical surface.<br/>The original atlas, as displayed on <a href=\"http://core-nets.org\">core-nets.org</a>, has <a href=\"../../macaque/MERetal14\">its own page</a>."
+    ],
+    "definingCitations":[{
+      "authors":["Markov NT","Ercsey-Ravasz MM","Ribeiro Gomes AR","Lamy C","Magrou L","Vezoli J","Misery P","Falchier A","Quilodran R","Gariel MA","Sallet J","Gamanut R","Huissoud C","Clavagnier S","Giroud P","Sappey-Marinier D","Barone P","Dehay C","Toroczkai Z","Knoblauch K","Van Essen DC","Kennedy H"],
+      "year":"2014",
+      "title":"A weighted and directed interareal connectivity matrix for macaque cerebral cortex.",
+      "journal":"Cereb Cortex",
+      "volume":"24(1)",
+      "pages":"17-36",
+      "doi":"10.1093/cercor/bhs270"
+    }]
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "T1",
+    "descr": "T1 scan case F99UA1, provided by M. Logothetis",
+    "format": "nifti",
+    "source": "/home/rbakker/rawdata/FVE91_on_F99/Macaque_F99_LR_MRI_resampledF99.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  },

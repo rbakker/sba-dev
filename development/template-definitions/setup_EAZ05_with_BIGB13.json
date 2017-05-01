@@ -1,0 +1,89 @@
+{
+  "ID":"EAZ05_with_BIGB13",
+  "defineTransformations":{
+    "BIGB13_to_EAZ05":{
+      "fixed":"http://localhost/incf/scalablebrainatlas/EAZ05_v20/source/colin27T1_seg.nii.gz",
+      "moving":"http://localhost/incf/scalablebrainatlas/BIGB13/source/full8_400um_downsample2.nii.gz",
+      "program": "elastix",
+      "paramfiles": [
+        "http://localhost/incf/scalablebrainatlas/elastix/Par0000affine.txt"
+      ]
+    }
+  },
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/Anatomy_v20_85plus.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "hullFormat": "nifti",
+  "hullSource": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/AnatMask.nii.gz",
+  "metadataFormat": "json",
+  "metadataSource": "../EAZ05_v20/template",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "bigbrain",
+    "format": "nifti",
+    "source": "http://localhost/incf/scalablebrainatlas/BIGB13/source/full8_400um_downsample2.nii.gz",
+    "applyTransformation":"BIGB13_to_EAZ05",
+    "pctile": "0.1-99.9",
+    "descr":"Bigbrain 400μm, warped."
+  },{
+    "name": "colin27-T1",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/colin27T1_seg.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample": [1]
+    },
+    "descr":"Colin27, average of 27 T1 scans of same individual"
+  },{
+    "name": "macro-v20",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/MacroLabels.nii.gz",
+    "descr": "area labels, version 1.8"
+  },{
+    "name": "WM",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/wwhite.img",
+    "pctile": "0.1-99.9",
+    "descr": "white matter"
+  },{
+    "name": "GM",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/wgrey.img",
+    "pctile": "0.1-99.9",
+    "descr": "gray matter"
+  },{
+    "name": "labels",
+    "format": "nifti",
+    "source": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/Anatomy_v20.nii.gz",
+    "colormap": "/my/rawdata/SPM_Toolbox_Amunts_v20/Anatomy/index2rgb.json",
+    "descr":"labels with colin27-T1 background"
+  }],
+  "sliceRange": [184,3,-1],
+  "svgTracingMethod": "mindthegap",
+  "aboutHtml":[],
+  "citeHtml":[],
+  "sourceHtml":[],
+  "config": {
+    "release":"beta",
+    "species": "Human",
+    "nlxName":"	Adult human",
+    "nlxId":"nlx_52049",
+    "ncbiName":"Homo sapiens",
+    "ncbiId":"9606",
+    "templateName": "Cytoarchitectonic segmentation of Eickhoff, Amunts, Zilles, et al. version 2.0",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": ["[unsegmented]"],
+    "plugins":[]
+  }
+}

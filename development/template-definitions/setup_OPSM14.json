@@ -1,0 +1,83 @@
+{
+  "ID":"OPSM14",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/OPSM14/segmentation_in_srs_141.nii.gz",
+  "delineationParams": {
+    "background": "#000000",
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "ITK-SnAP",
+  "metadataSource": "/my/rawdata/OPSM14/labels.txt",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+		"name": "MRI",
+		"source": "/my/rawdata/OPSM14/mri_reference_in_srs.nii.gz",
+		"format": "nifti",
+    "pctile": "0.1-99.9"
+  },{
+		"name": "nissl",
+		"format": "nifti",
+		"source": "/my/rawdata/OPSM14/nissl_stain_volume_deformed_in_srs.nii.gz",
+    "whitebackground":true
+  },{
+		"name": "tissue",
+		"format": "nifti",
+		"source": "/my/rawdata/OPSM14/blockface_volume_affine_in_srs.nii.gz",
+    "pctile": "0.1-99.9",
+    "whitebackground":true
+  },{
+		"name": "myelin",
+		"format": "nifti",
+		"source": "/my/rawdata/OPSM14/myelin_stain_volume_deformed_in_srs.nii.gz",
+    "pctile": "0.1-99.9",
+    "whitebackground":true
+  },{
+		"name": "muCT",
+		"format": "nifti",
+		"source": "/my/rawdata/OPSM14/micro_ct_in_srs_trimmed.nii.gz",
+    "pctile": "0.1-99.9"
+  },{
+		"name": "labels",
+		"format": "nifti",
+		"source": "/my/rawdata/OPSM14/segmentation_in_srs_141.nii.gz",
+    "colormap": "../OPSM14/template/index2rgb.json"
+  }],
+  "sliceRange": [453,0,-3],
+  "svgTracingMethod": "mindthegap",
+  "aboutHtml":[],
+  "citeHtml":[],
+  "sourceHtml":[],
+  "config": {
+    "release":"beta",
+    "species": "Opossum",
+    "strain": null,
+    "nlxName": null,
+    "nlxId": null,
+    "ncbiName":"Monodelphis domestica",
+    "ncbiId":"13616",
+    "templateName": "Multimodal atlas of gray short-tailed opossum brain (Chlodzinska, Majka et. al. 2014)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to bregma",
+    "whiteMatterAcronyms": [],
+    "definingCitations":[{
+      "authors":["Majka P","Chlodzinska N","Banasik T","Djavadian RL","Węglarz WP", "Turlejski K", "Wójcik DK"],
+      "title":"Multimodal stereotactic template of the gray short-tailed opossum's brain",
+      "journal":"Frontiers conf. abstract Neuroinformatics 2013",
+      "doi":"10.3389/conf.fninf.2013.09.00021"
+    },{ 
+      "authors":["Chlodzinska N","Majka P","Banasik T","Djavadian RL","Weglarz WP","Wójcik DK","Turlejski K"],
+      "title":"Delineation of brain structures in the Monodelphis domestica opossum brain.",
+      "journal":"11th International Congress of the Polish Neuroscience Society, Poznań, Poland, 2013",
+      "url":"http://fens2014.meetingxpert.net/FENS_427/poster_100792/program.aspx/anchor100792"
+    }],
+    "plugins":["bar3d"]
+  }
+}

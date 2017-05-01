@@ -1,0 +1,71 @@
+{
+  "ID":"DB09",
+  "delineationFormat": "nifti",
+  "delineationSource": "/home/rbakker/rawdata/NeuroMaps_2010aug10/atlas_rb.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "1",
+    "lineTolerance": "0.25"
+  },
+  "metadataFormat": "db09_xml",
+  "metadataSource": ["/home/rbakker/rawdata/NeuroMaps_2010aug10/atlas.atlas.xml","/home/rbakker/rawdata/NeuroMaps_2010aug10/NeuroNames 2010.tsv"],
+  "overlays":[{
+    "name": "MRI",
+    "descr": "T2-weighted MRI at 0.15 mm isotropic resolution.",
+    "format": "nifti",
+    "orientation":"coronal",
+    "source": "/home/rbakker/rawdata/NeuroMaps_2010aug10/mri_rb.nii.gz",
+    "pctile": "0-100",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  },{
+    "name": "labels",
+    "descr": "Parcellation based on gross anatomical landmarks.",
+    "format": "nifti",
+    "orientation":"coronal",
+    "source": "/home/rbakker/rawdata/NeuroMaps_2010aug10/atlas_rb.nii.gz",
+    "colormap": "../templates/DB09/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "templateName": "NeuroMaps Atlas",
+    "species": "Macaque",
+    "strain":"Rhesus macaque",
+    "nlxName":"Rhesus macaque",
+    "nlxId":"birnlex_103",
+    "ncbiName":"Macaca mulatta",
+    "ncbiId":"9544",
+    "hemisphere":"L",
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to center of anterior commissure",
+    "whiteMatterAcronyms": ["cw","ow","fw"],
+    "plugins":["braininfo"],
+    "aboutHtml":[
+      "The NeuroNames macaque atlas is part of the  <a href=\"http://neuromaps.braininfo.org:8180/mapper/index.html\">NeuroMaps Mapper application</a>, which allows the registration of 2D experimental brain slices to a 3D atlas. The atlas consists of a high resolution MRI with a region parcellation based on anatomical landmarks. Dubach and Bowden (2009) describe the atlas as follows:",
+      "<i>The brain of a single rhesus macaque (Macaca mulatta) has been segmented and mapped from a high-resolution MRI and is available on the Web. The model is a fully integrated, stereotaxic atlas of the cortex, subcortex, brainstem, and cerebellum. It can be used as 486 coronal, 346 horizontal, or 191 parasagittal 150-um thick 'sections'. Each voxel in the atlas is a cube 150 um on a side. Up to 90 brain structures appear in each section, and each voxel belongs to one and only one structure. The atlas can also be sectioned transversely at any angle. Registration and alignment problems that must be overcome by histologically based atlases are not an issue for the MRI-based atlas. One or more structures can be singled out and examined as simulated 3d objects, with a ‘ghost’ of the full brain remaining in view for orientation. The voxels identified with a given structure are designated by a color and by a fly-over caption in all views.</i>",
+      "The procedure to obtain the MRI scan is described in Rohlfing et al. (2012):",
+      "<i>The MRI template is an image of the ex vivo brain of a single, 3-year-old male rhesus macaque obtained from the Russian primate center at Sochi, Russia. The brain was first perfused with papaverine and heparin to prevent clotting during perfusion with paraformaldehyde for fixation. The specimen was then immersed in 1 mM gadopentetate dimeglumine, Gd-DTPA (Magnevist), for several days to enhance gray-white contrast. For scanning, the specimen was suspended in cotton batting in a cylindrical canister, which was filled with Fomblin to minimize image noise in the surrounding medium and pressurized to prevent artifacts due to air bubbles. A high-resolution MR image with 0.15 mm3 isotropic spatial resolution was acquired on a 4.7T Bruker Biospec Avance scanner with a three-dimensional T2-weighted gradient echo sequence. The imaged brain was then made symmetric by flattening the brain’s mid-plane and reflecting one hemisphere with respect to the flattened mid-plane.</i>"
+    ],
+    "definingCitations":[{
+      "authors":["Dubach MF","Bowden DM"],
+      "year":"2009",
+      "title":"BrainInfo online 3D macaque brain atlas: a database in the shape of a brain",
+      "journal":"Society for Neuroscience Annual Meeting, Chicago, IL",
+      "volume":"Abstract No. 199.5",
+      "url":"../docs/dubach_bowden_sfn2009.pdf"
+    },{
+      "authors":["Rohlfing T","Kroenke CD","Sullivan EV","Dubach MF","Bowden DM","Grant KA","Pfefferbaum A"],
+      "title":"The INIA19 Template and NeuroMaps Atlas for Primate Brain Image Parcellation and Spatial Normalization.",
+      "journal":"Frontiers in Neuroinformatics",
+      "year":"2012",
+      "volume":"6:27",
+      "doi":"10.3389/fninf.2012.00027"
+    }]
+  }
+}

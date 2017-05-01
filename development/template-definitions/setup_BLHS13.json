@@ -1,0 +1,62 @@
+{
+  "ID":"BLHS13",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/DATA/SBA/Badhwar_et_al_mouse_mri/bha_labels_sba11411.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/DATA/SBA/Badhwar_et_al_mouse_mri",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "MRI",
+    "descr": "Average T2-weighted 3D fast spin-echo",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/Badhwar_et_al_mouse_mri/badhwar_hippocampal_atlas.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  },{
+    "name": "labels",
+    "descr": "Hippocampal atlas + whole brain regions of Dorr et al. 2008",
+    "format": "nifti",
+    "source": "/my/DATA/SBA/Badhwar_et_al_mouse_mri/bha_labels_sba.nii.gz",
+    "colormap": "../templates/BLHS13/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "sliceRange": null,
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Mouse",
+    "strain": "C57Bl/6J",
+    "templateName": "Hippocampal atlas by Badhwar, Lerch, Hamel, Sled 2013",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to origin",
+    "whiteMatterAcronyms": ["hippocampal formation"],
+    "plugins":[],
+    "aboutHtml":[
+      "Anatomical images (T2-weighted 3D fast spin-echo) of adult C57Bl/6J mouse brains were acquired on a 7.0 Tesla scanner at an isotropic resolution of 32 μm. The hippocampus proper was manually segmented into the CA1, CA2, and CA3 subfields using the average volume generated from 103 independent mouse brain images. A detailed description of this atlas can be found in <a href=\"http://dx.doi.org/10.1016/j.nicl.2013.08.017\">Badhwar et al., 2013</a>. The non-hippocampal areas are obtained from the whole brain atlas of <a href=\"http://dx.doi.org/10.1016/j.neuroimage.2008.03.037\">Dorr et al., 2008</a>, using an automated registration procedure."
+    ],
+    "definingCitations":[{
+      "authors":["Badhwar A","Lerch JP","Hamel E","Sled JG"],
+      "year":"2013",
+      "title":"Impaired structural correlates of memory in Alzheimer's disease mice",
+      "journal":"NeuroImage: Clinical",
+      "volume":"3",
+      "pages":"290-300",
+      "doi":"10.1016/j.nicl.2013.08.017"
+    }]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "ID":"PLCJB14_141",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/WHS_Rat/WHS_SD_rat_atlas_v1.01_121.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "ITK-SnAP",
+  "metadataSource": "/my/rawdata/WHS_Rat/WHS_SD_rat_atlas_v1_hier.label",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[],
+  "sliceRange": [1018,1,-8],
+  "svgTracingMethod": "mindthegap",
+  "aboutHtml":[],
+  "citeHtml":[],
+  "sourceHtml":[],
+  "config": {
+    "release":"alpha",
+    "species": "Rat",
+    "templateName": "Waxholm Rat (Papp, Leergaard, Calabrese, Johnson, Bjaalie 2014)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. bregma",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":["bar3d"],
+    "definingCitations":[{ 
+      "authors": ["Papp EA","Leergaard TB","Calabrese E","Johnson GA","Bjaalie JG"], 
+      "title": "Waxholm Space atlas of the Sprague Dawley rat brain",
+      "journal": "NeuroImage",
+      "vol(no)": "",
+      "pages": "",
+      "year": "2014", 
+      "doi": "http://dx.doi.org/10.1016/j.neuroimage.2014.04.001"
+    }]
+  }
+}

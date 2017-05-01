@@ -1,0 +1,94 @@
+{
+  "ID":"WHS12new",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/WHS/WHS_0_6_1_Labels.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "json",
+  "metadataSource": "../../templates/WHS12/template",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+    "name": "T1",
+    "descr": "T1 MRI with TR=50 ms and a TE=5.1 ms",
+    "format": "nifti",
+    "source": "/my/rawdata/WHS/canon_T1_r.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[2]
+    }
+  },{
+    "name": "T2",
+    "descr": "T2 MRI with TR=300 ms and TE ranging from 7.5 to 60 ms",
+    "format": "nifti",
+    "source": "/my/rawdata/WHS/CT2Warped2T1.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[2]
+    }
+  },{
+    "name": "T2*",
+    "descr": "T2* MRI with a 45&#0176; gradient echo sequence, TR=50 ms and TE=4.3 ms",
+    "format": "nifti",
+    "source": "/my/rawdata/WHS/CT2starWarped2T1.nii.gz",
+    "pctile": "0.1-99.9",
+    "shareAsNifti": {
+      "downsample":[2]
+    }
+  },{
+    "name": "Nissl",
+    "descr": "21 &#181;m horizontal slices, stained for Nissl substance, digitized at 9.9 &#181;m resolution",
+    "format": "nifti",
+    "source": "/my/rawdata/WHS/canon_hist_r.nii.gz",
+    "pctile": "0.1-99.9"
+  },{
+    "name": "labels",
+    "descr": "Region parcellation version 0.6.1",
+    "format": "nifti",
+    "source": "/my/rawdata/WHS/WHS_0_6_1_Labels.nii.gz",
+    "colormap": "../ABA12/coronal_png/index2rgb.json",
+    "shareAsNifti": {
+      "downsample":[2]
+    }
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Mouse",
+    "strain":"C57BL/6",
+    "sex":"male",
+    "age":"p72 +/- 6",
+    "ncbiName":"Mus musculus",
+    "ncbiId":"10090",
+    "nlxName":"C57BL/6 mouse",
+    "nlxId":"nlx_143666",
+    "templateName": "Waxholm Space delineation 2012",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to anterior commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":["NeuroLex","bar3d","Landmarks","civm","braininfo"],
+    "aboutHtml":[
+      "The template name WHS12 refers to Waxholm space 2012. The region parcellation has version number 0.6.1 <a href=\"http://software.incf.org/software/waxholm-space/waxholm-space/mbat-ready-label-volume-v0.6.2\">(source)</a>, with region abbreviations taken from the <a href=\"http://braininfo.rprc.washington.edu/nnont.aspx\">NeuroNames ontology 2012</a>, except for those in between square brackets.",
+      "The <a href=\"http://software.incf.org/software/waxholm-space/home\">Waxholm space</a> is a coordinate-based reference space for the mapping and registration of neuroanatomical data in the mouse brain.<br/>See <a href=\"http://www.ncbi.nlm.nih.gov/pubmed/20600960\">Johnson et al, Neuroimage. 2010 Nov 1;53(2):365-372</a> for a detailed account of its goals, procedures, and <a href=\"http://civmvoxport.duhs.duke.edu/voxbase/studyhome.php?studyid=132\">available data in the original, full resolution</a>.",
+      "The three MR image modalities were acquired as follows:<ul><li>All scans were performed on a 9.4 T vertical bore magnet interfaced to a GE console running Epic 12.4X (GE Medical Systems, Milwaukee, WI).</li><li>The T1 ('spin lattice relaxation') data was acquired with an RF refocused spin echo sequence, using TR=50 ms and a TE=5.1 ms.</li><li>The T2 ('spin spin relaxation') data was acquired with a Carr-Purcell-Meiboom-Gill (CPMG) multi-echo sequence, with TR=300 ms and TE ranging from 7.5 to 60 ms.</li><li>The T2* ('magnetic susceptibility') data was acquired with a 45&#0176; gradient echo sequence, using TR=50 ms and TE=4.3 ms. An affine transform is applied to the raw T2 and T2* scans to best align with the T1 (CIVM datasets CT2Warped2T1.nii and CT2starWarped2T1.nii).</li></ul>",
+      "The NISSL data is the result of conventional histology: frozen brains were cut into 21 &#181;m horizontal slices, stained for Nissl substance, and photographed at 9.9 &#181;m resolution."
+    ],
+    "definingCitations":[{
+      "authors":["Johnson GA","Badea A","Brandenburg J","Cofer G","Fubara B","Liu S","Nissanov J"],
+      "year":"2010",
+      "title":"Waxholm space: an image-based reference for coordinating mouse brain research.",
+      "journal":"Neuroimage",
+      "volume":"53(2)",
+      "pages":"365-72",
+      "doi":"10.1016/j.neuroimage.2010.06.067"
+    }]
+  }
+}

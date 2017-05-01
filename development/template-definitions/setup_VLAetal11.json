@@ -1,0 +1,87 @@
+{
+  "ID":"VLAetal11",
+  "delineationFormat": "nifti",
+  "delineationSource": "/my/rawdata/YNIMG8445/clabels.nii.gz",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5",
+    "origin": [122,103,107]
+  },
+  "hullFormat": "nifti",
+  "hullSource": "/my/rawdata/YNIMG8445/cbrainmask.nii.gz",
+  "hullParams": {
+    "origin": [122,103,107]
+  },
+  "metadataFormat": "json",
+  "metadataSource": "/my/rawdata/YNIMG8445",
+  "regionHierarchyFormat": "-",
+  "regionHierarchySource": "",
+  "overlays":[{
+		"name": "T1",
+		"format": "nifti",
+		"source": "/my/rawdata/YNIMG8445/cT1_ac.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "ex vivo T1-weighted",
+    "shareAsNifti": {
+      "downsample": [1,2]
+    }
+	},{
+		"name": "DWI-b0",
+		"format": "nifti",
+		"source": "/my/rawdata/YNIMG8445/cDWI_0.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Diffusion Weighted Image with zero gradient strength.",
+    "origin": [122,103,107]
+  },{
+		"name": "FA",
+		"format": "nifti",
+		"source": "/my/rawdata/YNIMG8445/cFA.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "Fractional Anisotropy",
+    "origin": [122,103,107]
+	},{
+    "name": "cFA",    
+		"format": "nifti",
+		"source": "/my/rawdata/YNIMG8445/cFEFA_ac.nii.gz",
+    "pctile": "0.1-99.9",
+    "descr": "colored Fractional Anisotropy, with RGB-colors representing the orientation of the first eigenvector of the diffusion tensor. R=left-right, G=inferior-superior, B=anterior-posterior"
+  }],
+  "sliceRange": "auto",
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"beta",
+    "species": "Rat",
+    "strain":"Sprague Dawley",
+    "age":"?",
+    "gender": "?",
+    "nlxName":"Sprague Dawley",
+    "nlxId":"birnlex_266",
+    "ncbiName":"Rattus norvegicus",
+    "ncbiId":"10116",
+    "templateName": "Population-averaged DTI atlas of the Sprague Dawley rat (Veraart et al. 2011)",
+    "hemisphere":"LR",
+    "boundingBox":null,
+    "rasLimits":null,
+    "sliceCoordSystem":"RAS",
+    "sliceCoordFrame":null,
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. AC",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to Anterior Commissure",
+    "whiteMatterAcronyms": [],
+    "plugins":[],
+    "definingCitations":[{ 
+      "authors": ["Veraart J","Leergaard TB","Antonsen BT","Van Hecke W","Blockx I","Jeurissen B","Jiang Y","Van der Linden A","Johnson GA","Verhoye M","Sijbers J"], 
+      "title": "Population-averaged diffusion tensor imaging atlas of the Sprague Dawley rat brain.",
+      "journal": "Neuroimage",
+      "volume":"58(4)",
+      "year": "2011", 
+      "doi": "10.1016/j.neuroimage.2011.06.063"
+    }],
+    "licenseUrl":"http://visielab.uantwerpen.be/sites/default/files/research_topic_files/Terms%20of%20use.pdf",
+    "licenseIssuer": "University of Antwerp",
+    "aboutHtml": [
+      "The population-averaged 3D DTI atlas of the normal adult Sprague Dawley rat brain has been developed by <a href=\"http://visielab.uantwerpen.be/people/jelle-veraart\">Jelle Veraart</a> under supervision of <a href=\"http://visielab.uantwerpen.be/people/jan-sijbers\">Jan Sijbers</a> from the <a href=\"http://visielab.uantwerpen.be\">iMinds-Vision Lab</a> at the University of Antwerp.",
+      "The origin is defined as \"Junction of the rostral and dorsal tangential planes of the anterior commissure with the mid-sagittal plane\", and corresponds to voxel (123,103,107), where voxel (0,0,0) is the most (left,posterior,inferior)."
+    ]
+  }
+}

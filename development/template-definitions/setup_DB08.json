@@ -1,0 +1,51 @@
+{
+  "ID":"DB08",
+  "delineationFormat": "nifti",
+  "delineationSource": "../../raw_data/NeuroMaps_2010aug10/atlas.nii",
+  "delineationParams": {
+    "curveTolerance": "2",
+    "lineTolerance": "0.5"
+  },
+  "metadataFormat": "xml_DB08",
+  "metadataSource": "../../raw_data/NeuroMaps_2010aug10/atlas.atlas.xml",
+  "regionHierarchyFormat": "NeuroNames2010",
+  "regionHierarchySource": "../NeuroNames2010/NeuroNames 2010.tsv",
+  "overlays":[{
+    "name": "MRI",
+    "format": "nifti",
+    "orientation":"coronal",
+    "source": "../../raw_data/NeuroMaps_2010aug10/mri.nii",
+    "shareAsNifti": {
+      "downsample":[1]
+    }
+  }],
+  "svgTracingMethod": "mindthegap",
+  "config": {
+    "release":"alpha",
+    "templateName": "NeuroMaps Atlas",
+    "species": "Macaque",
+    "strain":"UNKNOWN Macaque Cynomolgus",
+    "nlxName":"UNKNOWN Long-tailed macaque",
+    "nlxId":"birnlex_291",
+    "ncbiName":"UNKNOWN Macaca fascicularis",
+    "ncbiId":"1215360",
+    "hemisphere":"L",
+    "slicePositionLabel":"",
+    "slicePositionUnit":"mm ant. ac",
+    "slicePositionDescription":"posterior(-) or anterior(+) distance to center of anterior commissure",
+    "whiteMatterAcronyms": ["cw"],
+    "plugins":[],
+    "aboutHtml":[
+      "TEST"
+    ],
+    "definingCitations":[{
+      "authors":["Author"],
+      "year":"2014",
+      "title":"TEST.",
+      "journal":"Cereb Cortex",
+      "volume":"24(1)",
+      "pages":"17-36",
+      "doi":"xyz"
+    }]
+  }
+}
